@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Shield Labs - Advanced Security Solutions</title>
+    <meta name="description" content="Quantum Shield Labs provides advanced cybersecurity, blockchain, and AI-driven security solutions for the quantum age.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Base styles */
+        body {
+            background: linear-gradient(to bottom, #0f172a, #000);
+            color: white;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(to bottom right, rgba(30, 58, 138, 0.4), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1639322537228-f710d846310a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.1);
+        }
+        
+        .navbar {
+            transition: all 0.3s ease;
+        }
+        
+        .navbar-scrolled {
+            background-color: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+        }
+        
+        .animate-fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 py-4 px-6">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="flex items-center space-x-2">
+                <i class="fas fa-shield-alt text-blue-500 text-2xl"></i>
+                <span class="text-xl font-bold">Quantum Shield Labs</span>
+            </a>
+            
+            <div class="hidden md:flex space-x-8">
+                <a href="#services" class="hover:text-blue-500 transition">Services</a>
+                <a href="#projects" class="hover:text-blue-500 transition">Projects</a>
+                <a href="#about" class="hover:text-blue-500 transition">About</a>
+                <a href="#resources" class="hover:text-blue-500 transition">Resources</a>
+                <a href="#contact" class="hover:text-blue-500 transition">Contact</a>
+            </div>
+            
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-gray-900 bg-opacity-95 backdrop-blur-lg">
+            <div class="container mx-auto px-4 py-4 flex flex-col space-y-4">
+                <a href="#services" class="block py-2 hover:text-blue-500 transition">Services</a>
+                <a href="#projects" class="block py-2 hover:text-blue-500 transition">Projects</a>
+                <a href="#about" class="block py-2 hover:text-blue-500 transition">About</a>
+                <a href="#resources" class="block py-2 hover:text-blue-500 transition">Resources</a>
+                <a href="#contact" class="block py-2 hover:text-blue-500 transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero flex items-center justify-center">
+        <div class="container mx-auto px-4 text-center">
+            <div class="animate-fade-in">
+                <i class="fas fa-shield-alt text-blue-500 text-4xl mb-8"></i>
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
+                    Advanced Security Solutions for the Quantum Age
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto">
+                    Cybersecurity, blockchain, and AI expertise to protect your digital assets in an evolving technological landscape.
+                </p>
+                
+                <a href="#services" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full text-lg font-semibold mx-auto transition transform hover:scale-105 shadow-lg hover:shadow-blue-500/30">
+                    <span class="flex items-center justify-center">
+                        <span>Explore Our Services</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </span>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-8 left-0 right-0 flex justify-center animate-bounce">
+            <div class="w-8 h-12 rounded-full border-2 border-white border-opacity-30 flex justify-center">
+                <div class="w-1 h-3 bg-white bg-opacity-60 rounded-full mt-2 animate-pulse"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-black bg-opacity-30">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                    Our Services
+                </h2>
+                <p class="text-gray-300 text-lg">
+                    Cutting-edge solutions designed to protect your digital assets and infrastructure 
+                    from emerging cybersecurity threats in the quantum era.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Service 1 -->
+                <div class="service-card bg-gradient-to-br from-gray-900 to-gray-800 bg-opacity-70 backdrop-blur-lg rounded-xl overflow-hidden shadow-lg transition-all duration-300">
+                    <div class="p-6">
+                        <div class="flex items-start">
+                            <div class="p-3 bg-blue-500 bg-opacity-10 rounded-lg">
+                                <i class="fas fa-shield-alt text-blue-500 text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-xl font-semibold mb-2">Security Consulting</h3>
+                                <p class="text-gray-400">Comprehensive risk assessments and penetration testing to identify and address vulnerabilities in your security infrastructure.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-gradient-to-br from-gray-900 to-gray-800 bg-opacity-70 backdrop-blur-lg rounded-xl overflow-hidden shadow-lg transition-all duration-300">
+                    <div class="p-6">
+                        <div class="flex items-start">
+                            <div class="p-3 bg-blue-500 bg-opacity-10 rounded-lg">
+                                <i class="fas fa-database text-blue-500 text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-xl font-semibold mb-2">Blockchain Integration</h3>
+                                <p class="text-gray-400">Expert implementation of secure blockchain solutions to enhance transactional integrity and transparency.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-gradient-to-br from-gray-900 to-gray-800 bg-opacity-70 backdrop-blur-lg rounded-xl overflow-hidden shadow-lg transition-all duration-300">
+                    <div class="p-6">
+                        <div class="flex items-start">
+                            <div class="p-3 bg-blue-500 bg-opacity-10 rounded-lg">
+                                <i class="fas fa-brain text-blue-500 text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-xl font-semibold mb-2">AI-Driven Security</h3>
+                                <p class="text-gray-400">Intelligent threat detection and response systems powered by machine learning algorithms.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card bg-gradient-to-br from-gray-900 to-gray-800 bg-opacity-70 backdrop-blur-lg rounded-xl overflow-hidden shadow-lg transition-all duration-300">
+                    <div class="p-6">
+                        <div class="flex items-start">
+                            <div class="p-3 bg-blue-500 bg-opacity-10 rounded-lg">
+                                <i class="fas fa-lock text-blue-500 text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-xl font-semibold mb-2">Quantum Resistance</h3>
+                                <p class="text-gray-400">Future-proof security measures designed to withstand the computational power of quantum computers.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- CTA Button -->
+            <div class="mt-16 text-center">
+                <a href="#contact" class="inline-block px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition shadow-lg hover:shadow-blue-500/30">
+                    Request a Consultation
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20">
+        <div class="container mx-auto px-4">
+            <!-- Company Vision -->
+            <div class="max-w-4xl mx-auto text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                    About Us
+                </h2>
+                <p class="text-xl text-gray-300 mb-8">
+                    Quantum Shield Labs was established with a vision to redefine the landscape of cybersecurity in the age of quantum computing and advanced threats.
+                </p>
+                <div class="bg-gray-900 bg-opacity-50 backdrop-blur-lg rounded-xl p-8 shadow-lg">
+                    <p class="text-gray-300 leading-relaxed">
+                        Founded by a team of seasoned security professionals, we combine expertise in cryptography, blockchain technology, and artificial intelligence to create comprehensive security solutions that protect organizations from both current and emerging threats in our increasingly digital world.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Core Values -->
+            <div class="mb-20">
+                <h3 class="text-2xl font-semibold text-center mb-12">Our Core Values</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Value 1 -->
+                    <div class="bg-gradient-to-br from-gray-900 to-gray-800 bg-opacity-20 backdrop-blur-lg rounded-xl p-6 shadow-lg hover:shadow-blue-500/10 transition-all duration-300 transform hover:-translate-y-1">
+                        <div class="p-3 bg-blue-500 bg-opacity-10 rounded-lg w-fit mb-4">
+                            <i class="fas fa-shield-alt text-blue-500 text-xl"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-3">Integrity</h4>
+                        <p class="text-gray-400">We operate with unwavering ethical standards and transparency in all our engagements.</p>
+                    </div>
+                    
+                    <!-- Value 2 -->
+                    <div class="bg-gradient-to-br from-gray-900 to-gray-800 bg-opacity-20 backdrop-blur-lg rounded-xl p-6 shadow-lg hover:shadow-blue-500/10 transition-all duration-300 transform hover:-translate-y-1">
+                        <div class="p-3 bg-blue-500 bg-opacity-10 rounded-lg w-fit mb-4">
+                            <i class="fas fa-code text-blue-500 text-xl"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-3">Innovation</h4>
+                        <p class="text-gray-400">We continuously pioneer new solutions to stay ahead of evolving security challenges.</p>
+                    </div>
+                    
+                    <!-- Value 3 -->
+                    <div class="bg-gradient-to-br from-gray-900 to-gray-800 bg-opacity-20 backdrop-blur-lg rounded-xl p-6 shadow-lg hover:shadow-blue-500/10 transition-all duration-300 transform hover:-translate-y-1">
+                        <div class="p-3 bg-blue-500 bg-opacity-10 rounded-lg w-fit mb-4">
+                            <i class="fas fa-chart-bar text-blue-500 text-xl"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-3">Excellence</h4>
+                        <p class="text-gray-400">We are committed to delivering superior quality in every service and solution.</p>
+                    </div>
+                    
+                    <!-- Value 4 -->
+                    <div class="bg-gradient-to-br from-gray-900 to-gray-800 bg-opacity-20 backdrop-blur-lg rounded-xl p-6 shadow-lg hover:shadow-blue-500/10 transition-all duration-300 transform hover:-translate-y-1">
+                        <div class="p-3 bg-blue-500 bg-opacity-10 rounded-lg w-fit mb-4">
+                            <i class="fas fa-clock text-blue-500 text-xl"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-3">Responsiveness</h4>
+                        <p class="text-gray-400">We understand security concerns need immediate attention and swift resolution.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-black bg-opacity-30">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-6">
+                Contact Us
+            </h2>
+            <p class="text-center text-gray-300 mb-16 max-w-3xl mx-auto">
+                Ready to transform your security posture? Get in touch with our team of experts today.
+            </p>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
+                <div class="space-y-8">
+                    <div class="flex items-start space-x-4">
+                        <div class="p-3 bg-blue-500 bg-opacity-10 rounded-lg">
+                            <i class="fas fa-phone text-blue-500 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Phone</h3>
+                            <p class="text-gray-300">+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-4">
+                        <div class="p-3 bg-blue-500 bg-opacity-10 rounded-lg">
+                            <i class="fas fa-envelope text-blue-500 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Email</h3>
+                            <p class="text-gray-300">contact@quantumshieldlabs.com</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-4">
+                        <div class="p-3 bg-blue-500 bg-opacity-10 rounded-lg">
+                            <i class="fas fa-map-marker-alt text-blue-500 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Location</h3>
+                            <p class="text-gray-300">123 Tech Avenue<br>Silicon Valley, CA 94025</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Business Hours -->
+                    <div class="mt-8 bg-gray-800 bg-opacity-20 rounded-lg p-6">
+                        <h3 class="text-xl font-semibold mb-4">Business Hours</h3>
+                        <ul class="space-y-2 text-gray-300">
+                            <li class="flex justify-between">
+                                <span>Monday - Friday:</span>
+                                <span>9:00 AM - 6:00 PM PST</span>
+                            </li>
+                            <li class="flex justify-between">
+                                <span>Saturday:</span>
+                                <span>10:00 AM - 4:00 PM PST</span>
+                            </li>
+                            <li class="flex justify-between">
+                                <span>Sunday:</span>
+                                <span>Closed</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="bg-gray-900 bg-opacity-20 backdrop-blur-lg rounded-xl p-6 shadow-lg">
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium mb-2">Name</label>
+                            <input
+                                id="name"
+                                name="name"
+                                type="text"
+                                class="w-full px-4 py-3 bg-gray-800 bg-opacity-50 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                placeholder="Your name"
+                            />
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-medium mb-2">Email</label>
+                            <input
+                                id="email"
+                                name="email"
+                                type="email"
+                                class="w-full px-4 py-3 bg-gray-800 bg-opacity-50 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                placeholder="your@email.com"
+                            />
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-medium mb-2">Message</label>
+                            <textarea
+                                id="message"
+                                name="message"
+                                class="w-full px-4 py-3 bg-gray-800 bg-opacity-50 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 h-32"
+                                placeholder="How can we help you?"
+                            ></textarea>
+                        </div>
+                        
+                        <button
+                            type="submit"
+                            class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition"
+                        >
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black bg-opacity-50 backdrop-blur-lg py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center space-x-2 mb-4 md:mb-0">
+                    <i class="fas fa-shield-alt text-blue-500 text-xl"></i>
+                    <span class="text-lg font-semibold">Quantum Shield Labs</span>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-blue-500 transition" aria-label="GitHub">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="#" class="hover:text-blue-500 transition" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="#" class="hover:text-blue-500 transition" aria-label="Twitter">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="mt-8 text-center text-gray-400">
+                <p>&copy; 2025 Quantum Shield Labs. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navigation scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('navbar-scrolled');
+            } else {
+                navbar.classList.remove('navbar-scrolled');
+            }
+        });
+        
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            // Change icon based on menu state
+            const icon = mobileMenuButton.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            }
+        });
+        
+        // Close mobile menu when clicking on a link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                const icon = mobileMenuButton.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            });
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80, // Offset for fixed navbar
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
