@@ -6,12 +6,14 @@
     <title>Quantum Shield Labs - Advanced Security Solutions</title>
     <meta name="description" content="Quantum Shield Labs provides advanced cybersecurity, blockchain, and AI-driven security solutions for the quantum age.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        /* Base styles */
         body {
             background: linear-gradient(to bottom, #0f172a, #000);
             color: white;
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-family: 'Inter', sans-serif;
         }
         
         .hero {
@@ -44,6 +46,7 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
+        /* Launch banner animation */
         .launch-banner {
             background: linear-gradient(270deg, #2563eb, #1e40af);
             background-size: 200% 200%;
@@ -54,52 +57,6 @@
             0% {background-position: 0% 50%}
             50% {background-position: 100% 50%}
             100% {background-position: 0% 50%}
-        }
-
-        .profile-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .project-card-img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-        }
-
-        .resource-card {
-            text-align: center;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .resource-card-content {
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 2rem;
-        }
-
-        .resource-icon {
-            background-color: rgba(59, 130, 246, 0.1);
-            width: 4rem;
-            height: 4rem;
-            border-radius: 9999px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.5rem;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .resource-icon i {
-            color: #3b82f6;
-            font-size: 1.5rem;
         }
     </style>
 </head>
@@ -212,7 +169,378 @@
                             </div>
                             <div class="ml-4">
                                 <h3 class="text-xl font-semibold mb-2">Security Consulting</h3>
-                                <p class="text-gray-400">Comprehensive risk assessments and penetration testing to identify and address vulnerabilities in your security infrastructure.</p>
+                                <p class="text-gray-400 text-center mb-4">Live and recorded sessions on AI-driven security, zero-trust architecture, and post-quantum preparedness.</p>
+                        <div class="bg-blue-600/10 rounded-lg p-3 text-center text-blue-300">
+                            <i class="fas fa-clock mr-2"></i> Coming Q4 2025
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Resource 3 -->
+                <div class="bg-gray-900/30 backdrop-blur-lg rounded-xl overflow-hidden shadow-lg transition-all duration-300 flex flex-col">
+                    <div class="p-6">
+                        <div class="bg-blue-500/10 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                            <i class="fas fa-tools text-blue-500 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-center mb-2">Security Tools</h3>
+                        <p class="text-gray-400 text-center mb-4">Open-source utilities and applications for security testing, monitoring, and hardening your systems.</p>
+                        <div class="bg-blue-600/10 rounded-lg p-3 text-center text-blue-300">
+                            <i class="fas fa-clock mr-2"></i> Coming Q1 2026
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Newsletter Signup -->
+            <div class="mt-16 max-w-3xl mx-auto bg-gradient-to-r from-blue-900/30 to-purple-900/30 rounded-xl p-8 shadow-lg">
+                <div class="text-center mb-6">
+                    <h3 class="text-2xl font-bold mb-2">Stay Updated</h3>
+                    <p class="text-gray-300">Subscribe to our newsletter to receive early access to resources and security insights.</p>
+                </div>
+                
+                <form class="flex flex-col md:flex-row gap-4">
+                    <input
+                        type="email"
+                        placeholder="Your email address"
+                        class="flex-grow px-4 py-3 bg-black/40 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    />
+                    <button
+                        type="submit"
+                        class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition"
+                    >
+                        Subscribe
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Launch Roadmap Section -->
+    <section id="roadmap" class="py-20 bg-black bg-opacity-30">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                    Launch Roadmap
+                </h2>
+                <p class="text-gray-300 text-lg">
+                    Our strategic journey to full operational capability, delivering cutting-edge security solutions to our clients.
+                </p>
+            </div>
+            
+            <div class="max-w-5xl mx-auto">
+                <!-- Timeline -->
+                <div class="relative">
+                    <!-- Timeline line -->
+                    <div class="absolute top-0 left-1/2 w-1 h-full bg-blue-500 bg-opacity-30 transform -translate-x-1/2"></div>
+                    
+                    <!-- Phase 1 -->
+                    <div class="relative z-10 mb-12">
+                        <div class="flex flex-col md:flex-row items-center">
+                            <div class="flex items-center justify-center order-1 md:order-1 w-full md:w-1/2 mb-6 md:mb-0 md:pr-10 text-right">
+                                <div class="bg-gray-900 bg-opacity-70 backdrop-blur-lg p-6 rounded-xl shadow-lg border-l-4 border-blue-400 ml-auto">
+                                    <h3 class="text-xl font-semibold mb-2 text-blue-400">Phase 1: Foundation</h3>
+                                    <p class="text-sm text-blue-300">Q1 2025 - Completed</p>
+                                    <p class="text-gray-300 mt-3">Team formation, core infrastructure development, and initial service offering design.</p>
+                                </div>
+                            </div>
+                            <div class="absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center">
+                                <div class="w-12 h-12 bg-blue-600 border-4 border-gray-900 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                                    1
+                                </div>
+                            </div>
+                            <div class="w-full md:w-1/2 order-2 md:pl-10 invisible md:visible"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Phase 2 -->
+                    <div class="relative z-10 mb-12">
+                        <div class="flex flex-col md:flex-row items-center">
+                            <div class="w-full md:w-1/2 order-2 md:order-1 md:pr-10 invisible md:visible"></div>
+                            <div class="absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center">
+                                <div class="w-12 h-12 bg-blue-600 border-4 border-gray-900 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                                    2
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-center order-1 md:order-2 w-full md:w-1/2 mb-6 md:mb-0 md:pl-10">
+                                <div class="bg-gray-900 bg-opacity-70 backdrop-blur-lg p-6 rounded-xl shadow-lg border-r-4 border-blue-400">
+                                    <h3 class="text-xl font-semibold mb-2 text-blue-400">Phase 2: Early Access</h3>
+                                    <p class="text-sm text-green-400">Q2 2025 - Current Phase</p>
+                                    <p class="text-gray-300 mt-3">Limited client onboarding, security consulting services, and solution framework testing.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Phase 3 -->
+                    <div class="relative z-10 mb-12">
+                        <div class="flex flex-col md:flex-row items-center">
+                            <div class="flex items-center justify-center order-1 md:order-1 w-full md:w-1/2 mb-6 md:mb-0 md:pr-10 text-right">
+                                <div class="bg-gray-900 bg-opacity-70 backdrop-blur-lg p-6 rounded-xl shadow-lg border-l-4 border-gray-600 ml-auto opacity-80">
+                                    <h3 class="text-xl font-semibold mb-2 text-gray-400">Phase 3: Beta Launch</h3>
+                                    <p class="text-sm text-gray-400">Q3 2025</p>
+                                    <p class="text-gray-400 mt-3">Expanded service offerings, partnership announcements, and client case studies.</p>
+                                </div>
+                            </div>
+                            <div class="absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center">
+                                <div class="w-12 h-12 bg-gray-700 border-4 border-gray-900 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                                    3
+                                </div>
+                            </div>
+                            <div class="w-full md:w-1/2 order-2 md:pl-10 invisible md:visible"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Phase 4 -->
+                    <div class="relative z-10">
+                        <div class="flex flex-col md:flex-row items-center">
+                            <div class="w-full md:w-1/2 order-2 md:order-1 md:pr-10 invisible md:visible"></div>
+                            <div class="absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center">
+                                <div class="w-12 h-12 bg-gray-700 border-4 border-gray-900 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                                    4
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-center order-1 md:order-2 w-full md:w-1/2 mb-6 md:mb-0 md:pl-10">
+                                <div class="bg-gray-900 bg-opacity-70 backdrop-blur-lg p-6 rounded-xl shadow-lg border-r-4 border-gray-600 opacity-80">
+                                    <h3 class="text-xl font-semibold mb-2 text-gray-400">Phase 4: Full Launch</h3>
+                                    <p class="text-sm text-gray-400">Q4 2025</p>
+                                    <p class="text-gray-400 mt-3">Complete service portfolio, global client support, and industry conference participation.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Early Access CTA -->
+                <div class="mt-20 bg-blue-900 bg-opacity-20 rounded-xl p-8 text-center max-w-3xl mx-auto border border-blue-800">
+                    <h3 class="text-2xl font-bold mb-4">Join Our Early Access Program</h3>
+                    <p class="text-gray-300 mb-6">
+                        Get priority access to our services and exclusive updates as we prepare for official launch.
+                        Limited spots available for security-conscious organizations.
+                    </p>
+                    <a href="#contact" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg transition">
+                        Apply Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-black bg-opacity-30">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-6">
+                Contact Us
+            </h2>
+            <p class="text-center text-gray-300 mb-6 max-w-3xl mx-auto">
+                Interested in our early access program? Get in touch with our team to discuss your security needs.
+            </p>
+            <div class="text-center max-w-3xl mx-auto bg-blue-900 bg-opacity-10 rounded-lg p-4 mb-12">
+                <i class="fas fa-info-circle text-blue-400 mr-2"></i>
+                <span class="text-blue-300">Currently accepting a limited number of early access partnerships.</span>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
+                <div class="space-y-8">
+                    <div class="flex items-start space-x-4">
+                        <div class="p-3 bg-blue-500 bg-opacity-10 rounded-lg">
+                            <i class="fas fa-phone text-blue-500 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Phone</h3>
+                            <p class="text-gray-300">(240) 659-8286</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-4">
+                        <div class="p-3 bg-blue-500 bg-opacity-10 rounded-lg">
+                            <i class="fas fa-envelope text-blue-500 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Email</h3>
+                            <p class="text-gray-300">michael@quantumshieldlabs.dev</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-4">
+                        <div class="p-3 bg-blue-500 bg-opacity-10 rounded-lg">
+                            <i class="fas fa-globe text-blue-500 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Website</h3>
+                            <p class="text-gray-300">quantumshieldlabs.dev</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Social Links -->
+                    <div class="mt-8 bg-gray-800 bg-opacity-20 rounded-lg p-6">
+                        <h3 class="text-xl font-semibold mb-4">Connect With Us</h3>
+                        <div class="flex justify-center space-x-6">
+                            <a href="https://github.com/mbennett-labs" class="bg-gray-900 hover:bg-gray-800 w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 hover:transform hover:scale-110">
+                                <i class="fab fa-github text-blue-400 text-xl"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/michael-bennett-a29a93103/" class="bg-gray-900 hover:bg-gray-800 w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 hover:transform hover:scale-110">
+                                <i class="fab fa-linkedin-in text-blue-400 text-xl"></i>
+                            </a>
+                            <a href="#" class="bg-gray-900 hover:bg-gray-800 w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 hover:transform hover:scale-110">
+                                <i class="fab fa-twitter text-blue-400 text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Early Access Form -->
+                <div class="bg-gray-900 bg-opacity-20 backdrop-blur-lg rounded-xl p-6 shadow-lg">
+                    <div class="mb-6 bg-blue-900 bg-opacity-20 rounded-lg p-4 border-l-4 border-blue-500">
+                        <h3 class="font-semibold text-lg mb-2">Early Access Application</h3>
+                        <p class="text-gray-300 text-sm">
+                            We're selectively accepting early access partners while we prepare for our full launch. 
+                            Tell us about your organization's security needs below.
+                        </p>
+                    </div>
+                    
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium mb-2">Name</label>
+                            <input
+                                id="name"
+                                name="name"
+                                type="text"
+                                class="w-full px-4 py-3 bg-gray-800 bg-opacity-50 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                placeholder="Your name"
+                            />
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-medium mb-2">Email</label>
+                            <input
+                                id="email"
+                                name="email"
+                                type="email"
+                                class="w-full px-4 py-3 bg-gray-800 bg-opacity-50 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                placeholder="your@email.com"
+                            />
+                        </div>
+                        
+                        <div>
+                            <label for="company" class="block text-sm font-medium mb-2">Company</label>
+                            <input
+                                id="company"
+                                name="company"
+                                type="text"
+                                class="w-full px-4 py-3 bg-gray-800 bg-opacity-50 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                placeholder="Your organization"
+                            />
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-medium mb-2">Security Needs</label>
+                            <textarea
+                                id="message"
+                                name="message"
+                                class="w-full px-4 py-3 bg-gray-800 bg-opacity-50 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 h-32"
+                                placeholder="Briefly describe your security challenges and requirements"
+                            ></textarea>
+                        </div>
+                        
+                        <button
+                            type="submit"
+                            class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition"
+                        >
+                            Apply for Early Access
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black bg-opacity-50 backdrop-blur-lg py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center space-x-2 mb-4 md:mb-0">
+                    <i class="fas fa-shield-alt text-blue-500 text-xl"></i>
+                    <span class="text-lg font-semibold">Quantum Shield Labs</span>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="https://github.com/mbennett-labs" class="hover:text-blue-500 transition" aria-label="GitHub">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/michael-bennett-a29a93103/" class="hover:text-blue-500 transition" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in text-xl"></i>
+                    </a>
+                    <a href="#" class="hover:text-blue-500 transition" aria-label="Twitter">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="mt-8 text-center text-gray-400">
+                <p>&copy; 2025 Quantum Shield Labs. All rights reserved.</p>
+                <p class="mt-2 text-sm text-gray-500">
+                    <i class="fas fa-rocket mr-1"></i> Currently in pre-launch phase. Full launch expected Q3 2025.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navigation scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('navbar-scrolled');
+            } else {
+                navbar.classList.remove('navbar-scrolled');
+            }
+        });
+        
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            // Change icon based on menu state
+            const icon = mobileMenuButton.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            }
+        });
+        
+        // Close mobile menu when clicking on a link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                const icon = mobileMenuButton.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            });
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80, // Offset for fixed navbar
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>text-gray-400">Comprehensive risk assessments and penetration testing to identify and address vulnerabilities in your security infrastructure.</p>
                             </div>
                         </div>
                     </div>
@@ -300,7 +628,7 @@
                 <!-- Project 1 -->
                 <div class="group relative overflow-hidden rounded-xl transition-all duration-300 transform hover:-translate-y-2 bg-gray-900/30 shadow-lg hover:shadow-blue-500/10">
                     <div class="aspect-video overflow-hidden bg-gray-800">
-                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2940&auto=format&fit=crop" alt="Secure Blog Platform" class="project-card-img">
+                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2940&auto=format&fit=crop" alt="Secure Blog Platform" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-110 group-hover:blur-sm">
                     </div>
                     <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent p-6 flex flex-col justify-end">
                         <h3 class="text-xl font-semibold mb-2">Secure Blog Platform</h3>
@@ -322,7 +650,7 @@
                 <!-- Project 2 -->
                 <div class="group relative overflow-hidden rounded-xl transition-all duration-300 transform hover:-translate-y-2 bg-gray-900/30 shadow-lg hover:shadow-blue-500/10">
                     <div class="aspect-video overflow-hidden bg-gray-800">
-                        <img src="https://images.unsplash.com/photo-1639762681057-408e52192e55?q=80&w=2832&auto=format&fit=crop" alt="Ethereum Smart Contracts" class="project-card-img">
+                        <img src="https://images.unsplash.com/photo-1639762681057-408e52192e55?q=80&w=2832&auto=format&fit=crop" alt="Ethereum Smart Contracts" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-110 group-hover:blur-sm">
                     </div>
                     <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent p-6 flex flex-col justify-end">
                         <h3 class="text-xl font-semibold mb-2">Ethereum Smart Contracts</h3>
@@ -344,7 +672,7 @@
                 <!-- Project 3 -->
                 <div class="group relative overflow-hidden rounded-xl transition-all duration-300 transform hover:-translate-y-2 bg-gray-900/30 shadow-lg hover:shadow-blue-500/10">
                     <div class="aspect-video overflow-hidden bg-gray-800">
-                        <img src="https://images.unsplash.com/photo-1614064641938-3bbee52942c7?q=80&w=2940&auto=format&fit=crop" alt="Celestia Light Node" class="project-card-img">
+                        <img src="https://images.unsplash.com/photo-1614064641938-3bbee52942c7?q=80&w=2940&auto=format&fit=crop" alt="Celestia Light Node" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-110 group-hover:blur-sm">
                     </div>
                     <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent p-6 flex flex-col justify-end">
                         <h3 class="text-xl font-semibold mb-2">Celestia Light Node</h3>
@@ -396,7 +724,8 @@
                 <div class="flex flex-col md:flex-row items-center gap-8">
                     <div class="md:w-1/3 flex justify-center">
                         <div class="w-48 h-48 rounded-full overflow-hidden border-4 border-blue-600/30">
-                            <img src="profile2.jpg" alt="Michael Bennett" class="profile-image">
+                            <!-- Updated to use your profile image -->
+                            <img src="profile.jpg" alt="Michael Bennett" class="w-full h-full object-cover">
                         </div>
                     </div>
                     <div class="md:w-2/3">
@@ -460,8 +789,6 @@
         </div>
     </section>
     
-   
-    
     <!-- Resources Section -->
     <section id="resources" class="py-20">
         <div class="container mx-auto px-4">
@@ -477,7 +804,7 @@
             <!-- Coming Soon Resources -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
                 <!-- Resource 1 -->
-                <div class="bg-gray-900/30 backdrop-blur-lg rounded-xl overflow-hidden shadow-lg transition-all duration-300 flex flex-col resource-card">
+                <div class="bg-gray-900/30 backdrop-blur-lg rounded-xl overflow-hidden shadow-lg transition-all duration-300 flex flex-col">
                     <div class="p-6">
                         <div class="bg-blue-500/10 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
                             <i class="fas fa-file-alt text-blue-500 text-2xl"></i>
@@ -491,6 +818,10 @@
                 </div>
                 
                 <!-- Resource 2 -->
-                <div class="bg-gray-900/30 backdrop-blur-lg rounded-xl overflow-hidden shadow-lg transition-all duration-300 flex flex-col resource-card">
+                <div class="bg-gray-900/30 backdrop-blur-lg rounded-xl overflow-hidden shadow-lg transition-all duration-300 flex flex-col">
                     <div class="p-6">
-                        <div class
+                        <div class="bg-blue-500/10 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                            <i class="fas fa-graduation-cap text-blue-500 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-center mb-2">Educational Webinars</h3>
+                        <p class="
