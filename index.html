@@ -45,14 +45,41 @@
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
-             object-fit: cover;
+        
+        /* Fix for profile image */
+        .profile-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         /* Fix for project cards */
-        .project-card-img {
-            width: 100%;
+        .project-card {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .project-img-container {
             height: 220px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .project-img {
+            width: 100%;
+            height: 100%;
             object-fit: cover;
+        }
+        
+        .project-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .project-description {
+            flex-grow: 1;
         }
 
         /* Launch banner animation */
@@ -66,6 +93,14 @@
             0% {background-position: 0% 50%}
             50% {background-position: 100% 50%}
             100% {background-position: 0% 50%}
+        }
+        
+        /* Ensure all project cards are equal height */
+        @media (min-width: 768px) {
+            .project-grid > * {
+                display: flex;
+                flex-direction: column;
+            }
         }
     </style>
 </head>
@@ -144,6 +179,13 @@
                         </span>
                     </a>
                 </div>
+            </div>
+        </div>
+        
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-8 left-0 right-0 flex justify-center animate-bounce">
+            <div class="w-8 h-12 rounded-full border-2 border-white/30 flex justify-center">
+                <div class="w-1 h-3 bg-white/60 rounded-full mt-2 animate-pulse"></div>
             </div>
         </div>
     </section>
@@ -234,400 +276,7 @@
         });
     </script>
 </body>
-</html>>
-            </div>
-        </div>
-        
-        <!-- Scroll indicator -->
-        <div class="absolute bottom-8 left-0 right-0 flex justify-center animate-bounce">
-            <div class="w-8 h-12 rounded-full border-2 border-white/30 flex justify-center">
-                <div class="w-1 h-3 bg-white/60 rounded-full mt-2 animate-pulse"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="py-20 bg-black bg-opacity-30">
-        <div class="container mx-auto px-4">
-            <div class="max-w-4xl mx-auto text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-6">
-                    Our Services
-                </h2>
-                <p class="text-gray-300 text-lg">
-                    Cutting-edge solutions designed to protect your digital assets and infrastructure 
-                    from emerging cybersecurity threats in the quantum era.
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                <!-- Service 1 -->
-                <div class="service-card bg-gradient-to-br from-gray-900 to-gray-800 bg-opacity-70 backdrop-blur-lg rounded-xl overflow-hidden shadow-lg transition-all duration-300">
-                    <div class="p-6">
-                        <div class="flex items-start">
-                            <div class="p-3 bg-blue-500 bg-opacity-10 rounded-lg">
-                                <i class="fas fa-shield-alt text-blue-500 text-xl"></i>
-                            </div>
-                            <div class="ml-4">
-                                <h3 class="text-xl font-semibold mb-2">Security Consulting</h3>
-                                <p class="text-gray-400">Comprehensive risk assessments and penetration testing to identify and address vulnerabilities in your security infrastructure.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Service 2 -->
-                <div class="service-card bg-gradient-to-br from-gray-900 to-gray-800 bg-opacity-70 backdrop-blur-lg rounded-xl overflow-hidden shadow-lg transition-all duration-300">
-                    <div class="p-6">
-                        <div class="flex items-start">
-                            <div class="p-3 bg-blue-500 bg-opacity-10 rounded-lg">
-                                <i class="fas fa-database text-blue-500 text-xl"></i>
-                            </div>
-                            <div class="ml-4">
-                                <h3 class="text-xl font-semibold mb-2">Blockchain Integration</h3>
-                                <p class="text-gray-400">Expert implementation of secure blockchain solutions to enhance transactional integrity and transparency.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Service 3 -->
-                <div class="service-card bg-gradient-to-br from-gray-900 to-gray-800 bg-opacity-70 backdrop-blur-lg rounded-xl overflow-hidden shadow-lg transition-all duration-300">
-                    <div class="p-6">
-                        <div class="flex items-start">
-                            <div class="p-3 bg-blue-500 bg-opacity-10 rounded-lg">
-                                <i class="fas fa-brain text-blue-500 text-xl"></i>
-                            </div>
-                            <div class="ml-4">
-                                <h3 class="text-xl font-semibold mb-2">AI-Driven Security</h3>
-                                <p class="text-gray-400">Intelligent threat detection and response systems powered by machine learning algorithms.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Service 4 -->
-                <div class="service-card bg-gradient-to-br from-gray-900 to-gray-800 bg-opacity-70 backdrop-blur-lg rounded-xl overflow-hidden shadow-lg transition-all duration-300">
-                    <div class="p-6">
-                        <div class="flex items-start">
-                            <div class="p-3 bg-blue-500 bg-opacity-10 rounded-lg">
-                                <i class="fas fa-lock text-blue-500 text-xl"></i>
-                            </div>
-                            <div class="ml-4">
-                                <h3 class="text-xl font-semibold mb-2">Quantum Resistance</h3>
-                                <p class="text-gray-400">Future-proof security measures designed to withstand the computational power of quantum computers.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Pre-Launch Note -->
-            <div class="mt-12 max-w-3xl mx-auto bg-blue-900 bg-opacity-20 rounded-xl p-6 border border-blue-800 text-center">
-                <i class="fas fa-info-circle text-blue-400 text-2xl mb-3"></i>
-                <h3 class="text-xl font-semibold mb-2">Pre-Launch Service Availability</h3>
-                <p class="text-gray-300">
-                    During our pre-launch phase, we're offering limited security consulting services to select clients 
-                    while we finalize our full-service offerings. 
-                </p>
-                <a href="#contact" class="inline-block mt-4 text-blue-400 hover:text-blue-300 font-medium">
-                    Request Early Access <i class="fas fa-arrow-right ml-1"></i>
-                </a>
-            </div>
-            
-            <!-- CTA Button -->
-            <div class="mt-16 text-center">
-                <a href="#contact" class="inline-block px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition shadow-lg hover:shadow-blue-500/30">
-                    Request a Consultation
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="py-20">
-        <div class="container mx-auto px-4">
-            <!-- Company Vision -->
-            <div class="max-w-4xl mx-auto text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-6">
-                    About Us
-                </h2>
-                <p class="text-xl text-gray-300 mb-8">
-                    Quantum Shield Labs was established with a vision to redefine the landscape of cybersecurity in the age of quantum computing and advanced threats.
-                </p>
-                <div class="bg-gray-900 bg-opacity-50 backdrop-blur-lg rounded-xl p-8 shadow-lg">
-                    <p class="text-gray-300 leading-relaxed">
-                        Founded by a team of seasoned security professionals, we combine expertise in cryptography, blockchain technology, and artificial intelligence to create comprehensive security solutions that protect organizations from both current and emerging threats in our increasingly digital world.
-                    </p>
-                </div>
-            </div>
-            
-                 <!-- Founder Background -->
-            <div class="max-w-4xl mx-auto bg-gray-900/30 backdrop-blur-lg rounded-xl p-8 mb-16">
-                <div class="flex flex-col md:flex-row items-center gap-8">
-                    <div class="md:w-1/3 flex justify-center">
-                        <div class="w-48 h-48 rounded-full overflow-hidden border-4 border-blue-600/30">
-                            <!-- Updated to use profile image with the proper class -->
-                            <img src="profile2.jpg" alt="Michael Bennett" class="profile-image">
-                        </div>
-                    </div>
-                    <div class="md:w-2/3">
-                        <h3 class="text-2xl font-semibold mb-3">Our Founder</h3>
-                        <p class="text-gray-300 mb-4">
-                            Michael Bennett brings a unique perspective to cybersecurity through his diverse career background, which includes experience as an Executive Chef developing skills in operational efficiency and team leadership, as well as a background in skilled trades including warehouse management.
-                        </p>
-                        <p class="text-gray-300">
-                            This unconventional journey has equipped him with a distinctive approach to problem-solving and a practical understanding of system design that drives Quantum Shield Labs' innovative security solutions.
-                        </p>
-                        <div class="mt-4">
-                            <a href="https://github.com/mbennett-labs" class="text-blue-400 hover:text-blue-300 flex items-center">
-                                <i class="fab fa-github mr-2"></i> View GitHub Profile
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Core Values -->
-            <div class="mb-20">
-                <h3 class="text-2xl font-semibold text-center mb-12">Our Core Values</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <!-- Value 1 -->
-                    <div class="bg-gradient-to-br from-gray-900 to-gray-800 bg-opacity-20 backdrop-blur-lg rounded-xl p-6 shadow-lg hover:shadow-blue-500/10 transition-all duration-300 transform hover:-translate-y-1">
-                        <div class="p-3 bg-blue-500 bg-opacity-10 rounded-lg w-fit mb-4">
-                            <i class="fas fa-shield-alt text-blue-500 text-xl"></i>
-                        </div>
-                        <h4 class="text-xl font-semibold mb-3">Integrity</h4>
-                        <p class="text-gray-400">We operate with unwavering ethical standards and transparency in all our engagements.</p>
-                    </div>
-                    
-                    <!-- Value 2 -->
-                    <div class="bg-gradient-to-br from-gray-900 to-gray-800 bg-opacity-20 backdrop-blur-lg rounded-xl p-6 shadow-lg hover:shadow-blue-500/10 transition-all duration-300 transform hover:-translate-y-1">
-                        <div class="p-3 bg-blue-500 bg-opacity-10 rounded-lg w-fit mb-4">
-                            <i class="fas fa-code text-blue-500 text-xl"></i>
-                        </div>
-                        <h4 class="text-xl font-semibold mb-3">Innovation</h4>
-                        <p class="text-gray-400">We continuously pioneer new solutions to stay ahead of evolving security challenges.</p>
-                    </div>
-                    
-                    <!-- Value 3 -->
-                    <div class="bg-gradient-to-br from-gray-900 to-gray-800 bg-opacity-20 backdrop-blur-lg rounded-xl p-6 shadow-lg hover:shadow-blue-500/10 transition-all duration-300 transform hover:-translate-y-1">
-                        <div class="p-3 bg-blue-500 bg-opacity-10 rounded-lg w-fit mb-4">
-                            <i class="fas fa-chart-bar text-blue-500 text-xl"></i>
-                        </div>
-                        <h4 class="text-xl font-semibold mb-3">Excellence</h4>
-                        <p class="text-gray-400">We are committed to delivering superior quality in every service and solution.</p>
-                    </div>
-                    
-                    <!-- Value 4 -->
-                    <div class="bg-gradient-to-br from-gray-900 to-gray-800 bg-opacity-20 backdrop-blur-lg rounded-xl p-6 shadow-lg hover:shadow-blue-500/10 transition-all duration-300 transform hover:-translate-y-1">
-                        <div class="p-3 bg-blue-500 bg-opacity-10 rounded-lg w-fit mb-4">
-                            <i class="fas fa-clock text-blue-500 text-xl"></i>
-                        </div>
-                        <h4 class="text-xl font-semibold mb-3">Responsiveness</h4>
-                        <p class="text-gray-400">We understand security concerns need immediate attention and swift resolution.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Launch Roadmap Section -->
-    <section id="roadmap" class="py-20 bg-black bg-opacity-30">
-        <div class="container mx-auto px-4">
-            <div class="max-w-4xl mx-auto text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-6">
-                    Launch Roadmap
-                </h2>
-                <p class="text-gray-300 text-lg">
-                    Our strategic journey to full operational capability, delivering cutting-edge security solutions to our clients.
-                </p>
-            </div>
-            
-            <div class="max-w-5xl mx-auto">
-                <!-- Timeline -->
-                <div class="relative">
-                    <!-- Timeline line -->
-                    <div class="absolute top-0 left-1/2 w-1 h-full bg-blue-500 bg-opacity-30 transform -translate-x-1/2"></div>
-                    
-                    <!-- Phase 1 -->
-                    <div class="relative z-10 mb-12">
-                        <div class="flex flex-col md:flex-row items-center">
-                            <div class="flex items-center justify-center order-1 md:order-1 w-full md:w-1/2 mb-6 md:mb-0 md:pr-10 text-right">
-                                <div class="bg-gray-900 bg-opacity-70 backdrop-blur-lg p-6 rounded-xl shadow-lg border-l-4 border-blue-400 ml-auto">
-                                    <h3 class="text-xl font-semibold mb-2 text-blue-400">Phase 1: Foundation</h3>
-                                    <p class="text-sm text-blue-300">Q1 2025 - Completed</p>
-                                    <p class="text-gray-300 mt-3">Team formation, core infrastructure development, and initial service offering design.</p>
-                                </div>
-                            </div>
-                            <div class="absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center">
-                                <div class="w-12 h-12 bg-blue-600 border-4 border-gray-900 rounded-full flex items-center justify-center text-white font-bold text-lg">
-                                    1
-                                </div>
-                            </div>
-                            <div class="w-full md:w-1/2 order-2 md:pl-10 invisible md:visible"></div>
-                        </div>
-                    </div>
-                    
-                    <!-- Phase 2 -->
-                    <div class="relative z-10 mb-12">
-                        <div class="flex flex-col md:flex-row items-center">
-                            <div class="w-full md:w-1/2 order-2 md:order-1 md:pr-10 invisible md:visible"></div>
-                            <div class="absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center">
-                                <div class="w-12 h-12 bg-blue-600 border-4 border-gray-900 rounded-full flex items-center justify-center text-white font-bold text-lg">
-                                    2
-                                </div>
-                            </div>
-                            <div class="flex items-center justify-center order-1 md:order-2 w-full md:w-1/2 mb-6 md:mb-0 md:pl-10">
-                                <div class="bg-gray-900 bg-opacity-70 backdrop-blur-lg p-6 rounded-xl shadow-lg border-r-4 border-blue-400">
-                                    <h3 class="text-xl font-semibold mb-2 text-blue-400">Phase 2: Early Access</h3>
-                                    <p class="text-sm text-green-400">Q2 2025 - Current Phase</p>
-                                    <p class="text-gray-300 mt-3">Limited client onboarding, security consulting services, and solution framework testing.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Phase 3 -->
-                    <div class="relative z-10 mb-12">
-                        <div class="flex flex-col md:flex-row items-center">
-                            <div class="flex items-center justify-center order-1 md:order-1 w-full md:w-1/2 mb-6 md:mb-0 md:pr-10 text-right">
-                                <div class="bg-gray-900 bg-opacity-70 backdrop-blur-lg p-6 rounded-xl shadow-lg border-l-4 border-gray-600 ml-auto opacity-80">
-                                    <h3 class="text-xl font-semibold mb-2 text-gray-400">Phase 3: Beta Launch</h3>
-                                    <p class="text-sm text-gray-400">Q3 2025</p>
-                                    <p class="text-gray-400 mt-3">Expanded service offerings, partnership announcements, and client case studies.</p>
-                                </div>
-                            </div>
-                            <div class="absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center">
-                                <div class="w-12 h-12 bg-gray-700 border-4 border-gray-900 rounded-full flex items-center justify-center text-white font-bold text-lg">
-                                    3
-                                </div>
-                            </div>
-                            <div class="w-full md:w-1/2 order-2 md:pl-10 invisible md:visible"></div>
-                        </div>
-                    </div>
-                    
-                    <!-- Phase 4 -->
-                    <div class="relative z-10">
-                        <div class="flex flex-col md:flex-row items-center">
-                            <div class="w-full md:w-1/2 order-2 md:order-1 md:pr-10 invisible md:visible"></div>
-                            <div class="absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center">
-                                <div class="w-12 h-12 bg-gray-700 border-4 border-gray-900 rounded-full flex items-center justify-center text-white font-bold text-lg">
-                                    4
-                                </div>
-                            </div>
-                            <div class="flex items-center justify-center order-1 md:order-2 w-full md:w-1/2 mb-6 md:mb-0 md:pl-10">
-                                <div class="bg-gray-900 bg-opacity-70 backdrop-blur-lg p-6 rounded-xl shadow-lg border-r-4 border-gray-600 opacity-80">
-                                    <h3 class="text-xl font-semibold mb-2 text-gray-400">Phase 4: Full Launch</h3>
-                                    <p class="text-sm text-gray-400">Q4 2025</p>
-                                    <p class="text-gray-400 mt-3">Complete service portfolio, global client support, and industry conference participation.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-              
-    <!-- Projects Section -->
-    <section id="projects" class="py-20">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-6">
-                Featured Projects
-            </h2>
-            <p class="text-center text-gray-300 mb-16 max-w-3xl mx-auto">
-                Explore our successful implementations that have transformed security postures and operational efficiencies across industries.
-            </p>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Project 1 -->
-                <div class="group relative overflow-hidden rounded-xl transition-all duration-300 transform hover:-translate-y-2 bg-gray-900/30 shadow-lg hover:shadow-blue-500/10">
-                    <div class="aspect-video overflow-hidden bg-gray-800">
-                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2940&auto=format&fit=crop" alt="Secure Blog Platform" class="project-card-img">
-                    </div>
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent p-6 flex flex-col justify-end">
-                        <h3 class="text-xl font-semibold mb-2">Secure Blog Platform</h3>
-                        <p class="text-gray-300 text-sm">A blogging platform built with security as the primary focus, featuring modern authentication methods and protection against common web vulnerabilities.</p>
-                        
-                        <!-- Tags -->
-                        <div class="flex flex-wrap gap-2 mt-3">
-                            <span class="text-xs bg-blue-500/20 text-blue-300 px-2 py-1 rounded-full">Python</span>
-                            <span class="text-xs bg-blue-500/20 text-blue-300 px-2 py-1 rounded-full">JavaScript</span>
-                            <span class="text-xs bg-blue-500/20 text-blue-300 px-2 py-1 rounded-full">Security</span>
-                        </div>
-                        
-                        <a href="https://github.com/mbennett-labs/secure-blog-platform" class="mt-4 flex items-center text-blue-500 group-hover:text-blue-400 transition-all duration-300">
-                            <span>View Project</span> <i class="fas fa-arrow-right ml-2 w-4 h-4"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Project 2 -->
-                <div class="group relative overflow-hidden rounded-xl transition-all duration-300 transform hover:-translate-y-2 bg-gray-900/30 shadow-lg hover:shadow-blue-500/10">
-                    <div class="aspect-video overflow-hidden bg-gray-800">
-                        <img src="https://images.unsplash.com/photo-1639762681057-408e52192e55?q=80&w=2832&auto=format&fit=crop" alt="Ethereum Smart Contracts" class="project-card-img">
-                    </div>
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent p-6 flex flex-col justify-end">
-                        <h3 class="text-xl font-semibold mb-2">Ethereum Smart Contracts</h3>
-                        <p class="text-gray-300 text-sm">Collection of Ethereum smart contracts implementing various use cases with a focus on security best practices and gas optimization.</p>
-                        
-                        <!-- Tags -->
-                        <div class="flex flex-wrap gap-2 mt-3">
-                            <span class="text-xs bg-blue-500/20 text-blue-300 px-2 py-1 rounded-full">Blockchain</span>
-                            <span class="text-xs bg-blue-500/20 text-blue-300 px-2 py-1 rounded-full">Solidity</span>
-                            <span class="text-xs bg-blue-500/20 text-blue-300 px-2 py-1 rounded-full">Web3</span>
-                        </div>
-                        
-                        <a href="https://github.com/mbennett-labs/ethereum-smart-contracts" class="mt-4 flex items-center text-blue-500 group-hover:text-blue-400 transition-all duration-300">
-                            <span>View Project</span> <i class="fas fa-arrow-right ml-2 w-4 h-4"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Project 3 -->
-                <div class="group relative overflow-hidden rounded-xl transition-all duration-300 transform hover:-translate-y-2 bg-gray-900/30 shadow-lg hover:shadow-blue-500/10">
-                    <div class="aspect-video overflow-hidden bg-gray-800">
-                        <img src="https://images.unsplash.com/photo-1614064641938-3bbee52942c7?q=80&w=2940&auto=format&fit=crop" alt="Celestia Light Node" class="project-card-img">
-                    </div>
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent p-6 flex flex-col justify-end">
-                        <h3 class="text-xl font-semibold mb-2">Celestia Light Node</h3>
-                        <p class="text-gray-300 text-sm">Resource-optimized Celestia Light Node implementation with custom monitoring dashboard for VPS environments.</p>
-                        
-                        <!-- Tags -->
-                        <div class="flex flex-wrap gap-2 mt-3">
-                            <span class="text-xs bg-blue-500/20 text-blue-300 px-2 py-1 rounded-full">Go</span>
-                            <span class="text-xs bg-blue-500/20 text-blue-300 px-2 py-1 rounded-full">Node.js</span>
-                            <span class="text-xs bg-blue-500/20 text-blue-300 px-2 py-1 rounded-full">Blockchain</span>
-                        </div>
-                        
-                        <a href="https://github.com/mbennett-labs/celestia-node-project" class="mt-4 flex items-center text-blue-500 group-hover:text-blue-400 transition-all duration-300">
-                            <span>View Project</span> <i class="fas fa-arrow-right ml-2 w-4 h-4"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Call-to-action button -->
-            <div class="text-center mt-12">
-                <a href="https://github.com/mbennett-labs" class="px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white rounded-lg shadow-lg hover:shadow-blue-500/30 transition">
-                    View All Projects
-                </a>
-            </div>
-        </div>
-    </section>
-                
-                <!-- Early Access CTA -->
-                <div class="mt-20 bg-blue-900 bg-opacity-20 rounded-xl p-8 text-center max-w-3xl mx-auto border border-blue-800">
-                    <h3 class="text-2xl font-bold mb-4">Join Our Early Access Program</h3>
-                    <p class="text-gray-300 mb-6">
-                        Get priority access to our services and exclusive updates as we prepare for official launch.
-                        Limited spots available for security-conscious organizations.
-                    </p>
-                    <a href="#contact" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg transition">
-                        Apply Now
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+</html>
 
     <!-- Contact Section -->
     <section id="contact" class="py-20 bg-black bg-opacity-30">
@@ -756,4 +405,353 @@
                             Apply for Early Access
                         </button>
                     </form>
-                </div
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-black bg-opacity-30">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                    Our Services
+                </h2>
+                <p class="text-gray-300 text-lg">
+                    Cutting-edge solutions designed to protect your digital assets and infrastructure 
+                    from emerging cybersecurity threats in the quantum era.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Service 1 -->
+                <div class="service-card bg-gradient-to-br from-gray-900 to-gray-800 bg-opacity-70 backdrop-blur-lg rounded-xl overflow-hidden shadow-lg transition-all duration-300">
+                    <div class="p-6">
+                        <div class="flex items-start">
+                            <div class="p-3 bg-blue-500 bg-opacity-10 rounded-lg">
+                                <i class="fas fa-shield-alt text-blue-500 text-xl"></i>
+                            </div>
+                    
+                    <!-- Phase 3 -->
+                    <div class="relative z-10 mb-12">
+                        <div class="flex flex-col md:flex-row items-center">
+                            <div class="flex items-center justify-center order-1 md:order-1 w-full md:w-1/2 mb-6 md:mb-0 md:pr-10 text-right">
+                                <div class="bg-gray-900 bg-opacity-70 backdrop-blur-lg p-6 rounded-xl shadow-lg border-l-4 border-gray-600 ml-auto opacity-80">
+                                    <h3 class="text-xl font-semibold mb-2 text-gray-400">Phase 3: Beta Launch</h3>
+                                    <p class="text-sm text-gray-400">Q3 2025</p>
+                                    <p class="text-gray-400 mt-3">Expanded service offerings, partnership announcements, and client case studies.</p>
+                                </div>
+                            </div>
+                            <div class="absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center">
+                                <div class="w-12 h-12 bg-gray-700 border-4 border-gray-900 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                                    3
+                                </div>
+                            </div>
+                            <div class="w-full md:w-1/2 order-2 md:pl-10 invisible md:visible"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Phase 4 -->
+                    <div class="relative z-10">
+                        <div class="flex flex-col md:flex-row items-center">
+                            <div class="w-full md:w-1/2 order-2 md:order-1 md:pr-10 invisible md:visible"></div>
+                            <div class="absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center">
+                                <div class="w-12 h-12 bg-gray-700 border-4 border-gray-900 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                                    4
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-center order-1 md:order-2 w-full md:w-1/2 mb-6 md:mb-0 md:pl-10">
+                                <div class="bg-gray-900 bg-opacity-70 backdrop-blur-lg p-6 rounded-xl shadow-lg border-r-4 border-gray-600 opacity-80">
+                                    <h3 class="text-xl font-semibold mb-2 text-gray-400">Phase 4: Full Launch</h3>
+                                    <p class="text-sm text-gray-400">Q4 2025</p>
+                                    <p class="text-gray-400 mt-3">Complete service portfolio, global client support, and industry conference participation.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                            <div class="ml-4">
+                                <h3 class="text-xl font-semibold mb-2">Security Consulting</h3>
+                                <p class="text-gray-400">Comprehensive risk assessments and penetration testing to identify and address vulnerabilities in your security infrastructure.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-gradient-to-br from-gray-900 to-gray-800 bg-opacity-70 backdrop-blur-lg rounded-xl overflow-hidden shadow-lg transition-all duration-300">
+                    <div class="p-6">
+                        <div class="flex items-start">
+                            <div class="p-3 bg-blue-500 bg-opacity-10 rounded-lg">
+                                <i class="fas fa-database text-blue-500 text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-xl font-semibold mb-2">Blockchain Integration</h3>
+                                <p class="text-gray-400">Expert implementation of secure blockchain solutions to enhance transactional integrity and transparency.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-gradient-to-br from-gray-900 to-gray-800 bg-opacity-70 backdrop-blur-lg rounded-xl overflow-hidden shadow-lg transition-all duration-300">
+                    <div class="p-6">
+                        <div class="flex items-start">
+                            <div class="p-3 bg-blue-500 bg-opacity-10 rounded-lg">
+                                <i class="fas fa-brain text-blue-500 text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-xl font-semibold mb-2">AI-Driven Security</h3>
+                                <p class="text-gray-400">Intelligent threat detection and response systems powered by machine learning algorithms.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card bg-gradient-to-br from-gray-900 to-gray-800 bg-opacity-70 backdrop-blur-lg rounded-xl overflow-hidden shadow-lg transition-all duration-300">
+                    <div class="p-6">
+                        <div class="flex items-start">
+                            <div class="p-3 bg-blue-500 bg-opacity-10 rounded-lg">
+                                <i class="fas fa-lock text-blue-500 text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-xl font-semibold mb-2">Quantum Resistance</h3>
+                                <p class="text-gray-400">Future-proof security measures designed to withstand the computational power of quantum computers.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Pre-Launch Note -->
+            <div class="mt-12 max-w-3xl mx-auto bg-blue-900 bg-opacity-20 rounded-xl p-6 border border-blue-800 text-center">
+                <i class="fas fa-info-circle text-blue-400 text-2xl mb-3"></i>
+                <h3 class="text-xl font-semibold mb-2">Pre-Launch Service Availability</h3>
+                <p class="text-gray-300">
+                    During our pre-launch phase, we're offering limited security consulting services to select clients 
+                    while we finalize our full-service offerings. 
+                </p>
+                <a href="#contact" class="inline-block mt-4 text-blue-400 hover:text-blue-300 font-medium">
+                    Request Early Access <i class="fas fa-arrow-right ml-1"></i>
+                </a>
+            </div>
+            
+            <!-- CTA Button -->
+            <div class="mt-16 text-center">
+                <a href="#contact" class="inline-block px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition shadow-lg hover:shadow-blue-500/30">
+                    Request a Consultation
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20">
+        <div class="container mx-auto px-4">
+            <!-- Company Vision -->
+            <div class="max-w-4xl mx-auto text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                    About Us
+                </h2>
+                <p class="text-xl text-gray-300 mb-8">
+                    Quantum Shield Labs was established with a vision to redefine the landscape of cybersecurity in the age of quantum computing and advanced threats.
+                </p>
+                <div class="bg-gray-900 bg-opacity-50 backdrop-blur-lg rounded-xl p-8 shadow-lg">
+                    <p class="text-gray-300 leading-relaxed">
+                        Founded by a team of seasoned security professionals, we combine expertise in cryptography, blockchain technology, and artificial intelligence to create comprehensive security solutions that protect organizations from both current and emerging threats in our increasingly digital world.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Founder Background -->
+            <div class="max-w-4xl mx-auto bg-gray-900/30 backdrop-blur-lg rounded-xl p-8 mb-16">
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                    <div class="md:w-1/3 flex justify-center">
+                        <div class="w-48 h-48 rounded-full overflow-hidden border-4 border-blue-600/30">
+                            <!-- Kept the original profile image reference -->
+                            <img src="profile2.jpg" alt="Michael Bennett" class="profile-image">
+                        </div>
+                    </div>
+                    <div class="md:w-2/3">
+                        <h3 class="text-2xl font-semibold mb-3">Our Founder</h3>
+                        <p class="text-gray-300 mb-4">
+                            Michael Bennett brings a unique perspective to cybersecurity through his diverse career background, which includes experience as an Executive Chef developing skills in operational efficiency and team leadership, as well as a background in skilled trades including warehouse management.
+                        </p>
+                        <p class="text-gray-300">
+                            This unconventional journey has equipped him with a distinctive approach to problem-solving and a practical understanding of system design that drives Quantum Shield Labs' innovative security solutions.
+                        </p>
+                        <div class="mt-4">
+                            <a href="https://github.com/mbennett-labs" class="text-blue-400 hover:text-blue-300 flex items-center">
+                                <i class="fab fa-github mr-2"></i> View GitHub Profile
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Core Values -->
+            <div class="mb-20">
+                <h3 class="text-2xl font-semibold text-center mb-12">Our Core Values</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Value 1 -->
+                    <div class="bg-gradient-to-br from-gray-900 to-gray-800 bg-opacity-20 backdrop-blur-lg rounded-xl p-6 shadow-lg hover:shadow-blue-500/10 transition-all duration-300 transform hover:-translate-y-1">
+                        <div class="p-3 bg-blue-500 bg-opacity-10 rounded-lg w-fit mb-4">
+                            <i class="fas fa-shield-alt text-blue-500 text-xl"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-3">Integrity</h4>
+                        <p class="text-gray-400">We operate with unwavering ethical standards and transparency in all our engagements.</p>
+                    </div>
+                    
+                    <!-- Value 2 -->
+                    <div class="bg-gradient-to-br from-gray-900 to-gray-800 bg-opacity-20 backdrop-blur-lg rounded-xl p-6 shadow-lg hover:shadow-blue-500/10 transition-all duration-300 transform hover:-translate-y-1">
+                        <div class="p-3 bg-blue-500 bg-opacity-10 rounded-lg w-fit mb-4">
+                            <i class="fas fa-code text-blue-500 text-xl"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-3">Innovation</h4>
+                        <p class="text-gray-400">We continuously pioneer new solutions to stay ahead of evolving security challenges.</p>
+                    </div>
+                    
+                    <!-- Value 3 -->
+                    <div class="bg-gradient-to-br from-gray-900 to-gray-800 bg-opacity-20 backdrop-blur-lg rounded-xl p-6 shadow-lg hover:shadow-blue-500/10 transition-all duration-300 transform hover:-translate-y-1">
+                        <div class="p-3 bg-blue-500 bg-opacity-10 rounded-lg w-fit mb-4">
+                            <i class="fas fa-chart-bar text-blue-500 text-xl"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-3">Excellence</h4>
+                        <p class="text-gray-400">We are committed to delivering superior quality in every service and solution.</p>
+                    </div>
+                    
+                    <!-- Value 4 -->
+                    <div class="bg-gradient-to-br from-gray-900 to-gray-800 bg-opacity-20 backdrop-blur-lg rounded-xl p-6 shadow-lg hover:shadow-blue-500/10 transition-all duration-300 transform hover:-translate-y-1">
+                        <div class="p-3 bg-blue-500 bg-opacity-10 rounded-lg w-fit mb-4">
+                            <i class="fas fa-clock text-blue-500 text-xl"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-3">Responsiveness</h4>
+                        <p class="text-gray-400">We understand security concerns need immediate attention and swift resolution.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-black bg-opacity-30">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-6">
+                Featured Projects
+            </h2>
+            <p class="text-center text-gray-300 mb-16 max-w-3xl mx-auto">
+                Explore our successful implementations that have transformed security postures and operational efficiencies across industries.
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 project-grid">
+                <!-- Project 1 -->
+                <div class="project-card bg-gray-900/30 rounded-xl overflow-hidden shadow-lg hover:shadow-blue-500/10 transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="project-img-container">
+                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2940&auto=format&fit=crop" alt="Secure Blog Platform" class="project-img">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/60 to-transparent"></div>
+                    </div>
+                    <div class="p-6 project-content">
+                        <h3 class="text-xl font-semibold mb-2">Secure Blog Platform</h3>
+                        <p class="text-gray-300 text-sm mb-4 project-description">A blogging platform built with security as the primary focus, featuring modern authentication methods and protection against common web vulnerabilities.</p>
+                        
+                        <!-- Tags -->
+                        <div>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="text-xs bg-blue-500/20 text-blue-300 px-2 py-1 rounded-full">Python</span>
+                                <span class="text-xs bg-blue-500/20 text-blue-300 px-2 py-1 rounded-full">JavaScript</span>
+                                <span class="text-xs bg-blue-500/20 text-blue-300 px-2 py-1 rounded-full">Security</span>
+                            </div>
+                            
+                            <a href="https://github.com/mbennett-labs/secure-blog-platform" class="flex items-center text-blue-500 hover:text-blue-400 transition-all duration-300">
+                                <span>View Project</span> <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card bg-gray-900/30 rounded-xl overflow-hidden shadow-lg hover:shadow-blue-500/10 transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="project-img-container">
+                        <img src="https://images.unsplash.com/photo-1639762681057-408e52192e55?q=80&w=2832&auto=format&fit=crop" alt="Ethereum Smart Contracts" class="project-img">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/60 to-transparent"></div>
+                    </div>
+                    <div class="p-6 project-content">
+                        <h3 class="text-xl font-semibold mb-2">Ethereum Smart Contracts</h3>
+                        <p class="text-gray-300 text-sm mb-4 project-description">Collection of Ethereum smart contracts implementing various use cases with a focus on security best practices and gas optimization.</p>
+                        
+                        <!-- Tags -->
+                        <div>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="text-xs bg-blue-500/20 text-blue-300 px-2 py-1 rounded-full">Blockchain</span>
+                                <span class="text-xs bg-blue-500/20 text-blue-300 px-2 py-1 rounded-full">Solidity</span>
+                                <span class="text-xs bg-blue-500/20 text-blue-300 px-2 py-1 rounded-full">Web3</span>
+                            </div>
+                            
+                            <a href="https://github.com/mbennett-labs/ethereum-smart-contracts" class="flex items-center text-blue-500 hover:text-blue-400 transition-all duration-300">
+                                <span>View Project</span> <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card bg-gray-900/30 rounded-xl overflow-hidden shadow-lg hover:shadow-blue-500/10 transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="project-img-container">
+                        <img src="https://images.unsplash.com/photo-1614064641938-3bbee52942c7?q=80&w=2940&auto=format&fit=crop" alt="Celestia Light Node" class="project-img">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/60 to-transparent"></div>
+                    </div>
+                    <div class="p-6 project-content">
+                        <h3 class="text-xl font-semibold mb-2">Celestia Light Node</h3>
+                        <p class="text-gray-300 text-sm mb-4 project-description">Resource-optimized Celestia Light Node implementation with custom monitoring dashboard for VPS environments.</p>
+                        
+                        <!-- Tags -->
+                        <div>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="text-xs bg-blue-500/20 text-blue-300 px-2 py-1 rounded-full">Go</span>
+                                <span class="text-xs bg-blue-500/20 text-blue-300 px-2 py-1 rounded-full">Node.js</span>
+                                <span class="text-xs bg-blue-500/20 text-blue-300 px-2 py-1 rounded-full">Blockchain</span>
+                            </div>
+                            
+                            <a href="https://github.com/mbennett-labs/celestia-node-project" class="flex items-center text-blue-500 hover:text-blue-400 transition-all duration-300">
+                                <span>View Project</span> <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Call-to-action button -->
+            <div class="text-center mt-12">
+                <a href="https://github.com/mbennett-labs" class="px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white rounded-lg shadow-lg hover:shadow-blue-500/30 transition">
+                    View All Projects
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Launch Roadmap Section -->
+    <section id="roadmap" class="py-20 bg-black bg-opacity-30">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                    Launch Roadmap
+                </h2>
+                <p class="text-gray-300 text-lg">
+                    Our strategic journey to full operational capability, delivering cutting-edge security solutions to our clients.
+                </p>
+            </div>
+            
+            <div class="max-w-5xl mx-auto">
+                <!-- Timeline -->
+                <div class="relative">
+                    <!-- Timeline line -->
+                    <div class="absolute top-0 left-1/2 w-1 h-full bg-blue-500 bg-opacity-30 transform -translate-x-1/2"></div>
+                    
+                    <!-- Phase 1 -->
+                    <div class="relative z-10 mb-12">
+                        <div class="flex flex-col md:flex-row items-center">
+                            <div class="flex items-center justify-center order-1 md:order-1 w-full md:w-1/2 mb-6 md:mb-0 md:pr-10 text-right">
+                                <div class="bg-gray-900 bg-opacity-70 backdrop-blur-lg p-6 rounded-xl shadow-lg border-l-4 border-blue-400 ml-auto">
+                                    <h3 class="text-xl font-semibold mb-2 text-blue-400">Phase 1: Foundation</h3>
+                                    <p class="text-sm text-blue-300">Q1 2025 - Completed</p>
+                                    <p class="text-gray-300 mt-3">Team formation, core infrastructure development, and initial service offering design.</p>
