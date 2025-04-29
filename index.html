@@ -58,6 +58,28 @@
             50% {background-position: 100% 50%}
             100% {background-position: 0% 50%}
         }
+
+        /* Fix for profile image */
+        .profile-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Fix for project cards */
+        .project-card-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        /* Center content in resource cards */
+        .resource-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -163,13 +185,11 @@
                 <!-- Service 1 -->
                 <div class="service-card bg-gradient-to-br from-gray-900 to-gray-800 bg-opacity-70 backdrop-blur-lg rounded-xl overflow-hidden shadow-lg transition-all duration-300">
                     <div class="p-6">
-                        <div class="flex items-start">
-                            <div class="p-3 bg-blue-500 bg-opacity-10 rounded-lg">
-                                <i class="fas fa-shield-alt text-blue-500 text-xl"></i>
-                            </div>
-                            <div class="ml-4">
-                                <h3 class="text-xl font-semibold mb-2">Security Consulting</h3>
-                                <p class="text-gray-400 text-center mb-4">Live and recorded sessions on AI-driven security, zero-trust architecture, and post-quantum preparedness.</p>
+                        <div class="bg-blue-500/10 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                            <i class="fas fa-graduation-cap text-blue-500 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-center mb-2">Educational Webinars</h3>
+                        <p class="text-gray-400 text-center mb-4">Live and recorded sessions on AI-driven security, zero-trust architecture, and post-quantum preparedness.</p>
                         <div class="bg-blue-600/10 rounded-lg p-3 text-center text-blue-300">
                             <i class="fas fa-clock mr-2"></i> Coming Q4 2025
                         </div>
@@ -177,7 +197,7 @@
                 </div>
                 
                 <!-- Resource 3 -->
-                <div class="bg-gray-900/30 backdrop-blur-lg rounded-xl overflow-hidden shadow-lg transition-all duration-300 flex flex-col">
+                <div class="bg-gray-900/30 backdrop-blur-lg rounded-xl overflow-hidden shadow-lg transition-all duration-300 flex flex-col resource-card">
                     <div class="p-6">
                         <div class="bg-blue-500/10 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
                             <i class="fas fa-tools text-blue-500 text-2xl"></i>
@@ -540,7 +560,13 @@
         });
     </script>
 </body>
-</html>text-gray-400">Comprehensive risk assessments and penetration testing to identify and address vulnerabilities in your security infrastructure.</p>
+</html>="flex items-start">
+                            <div class="p-3 bg-blue-500 bg-opacity-10 rounded-lg">
+                                <i class="fas fa-shield-alt text-blue-500 text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-xl font-semibold mb-2">Security Consulting</h3>
+                                <p class="text-gray-400">Comprehensive risk assessments and penetration testing to identify and address vulnerabilities in your security infrastructure.</p>
                             </div>
                         </div>
                     </div>
@@ -628,7 +654,7 @@
                 <!-- Project 1 -->
                 <div class="group relative overflow-hidden rounded-xl transition-all duration-300 transform hover:-translate-y-2 bg-gray-900/30 shadow-lg hover:shadow-blue-500/10">
                     <div class="aspect-video overflow-hidden bg-gray-800">
-                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2940&auto=format&fit=crop" alt="Secure Blog Platform" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-110 group-hover:blur-sm">
+                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2940&auto=format&fit=crop" alt="Secure Blog Platform" class="project-card-img">
                     </div>
                     <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent p-6 flex flex-col justify-end">
                         <h3 class="text-xl font-semibold mb-2">Secure Blog Platform</h3>
@@ -650,7 +676,7 @@
                 <!-- Project 2 -->
                 <div class="group relative overflow-hidden rounded-xl transition-all duration-300 transform hover:-translate-y-2 bg-gray-900/30 shadow-lg hover:shadow-blue-500/10">
                     <div class="aspect-video overflow-hidden bg-gray-800">
-                        <img src="https://images.unsplash.com/photo-1639762681057-408e52192e55?q=80&w=2832&auto=format&fit=crop" alt="Ethereum Smart Contracts" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-110 group-hover:blur-sm">
+                        <img src="https://images.unsplash.com/photo-1639762681057-408e52192e55?q=80&w=2832&auto=format&fit=crop" alt="Ethereum Smart Contracts" class="project-card-img">
                     </div>
                     <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent p-6 flex flex-col justify-end">
                         <h3 class="text-xl font-semibold mb-2">Ethereum Smart Contracts</h3>
@@ -672,7 +698,7 @@
                 <!-- Project 3 -->
                 <div class="group relative overflow-hidden rounded-xl transition-all duration-300 transform hover:-translate-y-2 bg-gray-900/30 shadow-lg hover:shadow-blue-500/10">
                     <div class="aspect-video overflow-hidden bg-gray-800">
-                        <img src="https://images.unsplash.com/photo-1614064641938-3bbee52942c7?q=80&w=2940&auto=format&fit=crop" alt="Celestia Light Node" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-110 group-hover:blur-sm">
+                        <img src="https://images.unsplash.com/photo-1614064641938-3bbee52942c7?q=80&w=2940&auto=format&fit=crop" alt="Celestia Light Node" class="project-card-img">
                     </div>
                     <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent p-6 flex flex-col justify-end">
                         <h3 class="text-xl font-semibold mb-2">Celestia Light Node</h3>
@@ -724,8 +750,8 @@
                 <div class="flex flex-col md:flex-row items-center gap-8">
                     <div class="md:w-1/3 flex justify-center">
                         <div class="w-48 h-48 rounded-full overflow-hidden border-4 border-blue-600/30">
-                            <!-- Updated to use your profile image -->
-                            <img src="profile.jpg" alt="Michael Bennett" class="w-full h-full object-cover">
+                            <!-- Updated to use profile image with the proper class -->
+                            <img src="profile2.jpg" alt="Michael Bennett" class="profile-image">
                         </div>
                     </div>
                     <div class="md:w-2/3">
@@ -804,7 +830,7 @@
             <!-- Coming Soon Resources -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
                 <!-- Resource 1 -->
-                <div class="bg-gray-900/30 backdrop-blur-lg rounded-xl overflow-hidden shadow-lg transition-all duration-300 flex flex-col">
+                <div class="bg-gray-900/30 backdrop-blur-lg rounded-xl overflow-hidden shadow-lg transition-all duration-300 flex flex-col resource-card">
                     <div class="p-6">
                         <div class="bg-blue-500/10 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
                             <i class="fas fa-file-alt text-blue-500 text-2xl"></i>
@@ -818,10 +844,6 @@
                 </div>
                 
                 <!-- Resource 2 -->
-                <div class="bg-gray-900/30 backdrop-blur-lg rounded-xl overflow-hidden shadow-lg transition-all duration-300 flex flex-col">
+                <div class="bg-gray-900/30 backdrop-blur-lg rounded-xl overflow-hidden shadow-lg transition-all duration-300 flex flex-col resource-card">
                     <div class="p-6">
-                        <div class="bg-blue-500/10 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
-                            <i class="fas fa-graduation-cap text-blue-500 text-2xl"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold text-center mb-2">Educational Webinars</h3>
-                        <p class="
+                        <div class
