@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Post Title | Quantum Shield Labs</title>
+    <meta name="description" content="Your post description">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background: linear-gradient(to bottom, #0f172a, #000);
+            color: white;
+            font-family: 'Inter', sans-serif;
+        }
+        .blog-content {
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+        .blog-content h2 {
+            color: #3b82f6;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        .blog-content p {
+            margin-bottom: 1.5rem;
+        }
+        .blog-content blockquote {
+            border-left: 4px solid #3b82f6;
+            padding: 1rem 1rem 1rem 2rem;
+            margin: 1.5rem 0;
+            background: rgba(59, 130, 246, 0.1);
+            border-radius: 0 0.5rem 0.5rem 0;
+            font-style: italic;
+            color: #94a3b8;
+        }
+    </style>
+</head>
+<body>
+    <nav class="fixed w-full z-50 py-4 px-6 bg-black/80 backdrop-blur-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="../index.html" class="flex items-center space-x-2">
+                <i class="fas fa-shield-alt text-blue-500 text-2xl"></i>
+                <span class="text-xl font-bold">Quantum Shield Labs</span>
+            </a>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="hover:text-blue-500 transition">← Back to Blog</a>
+                <a href="../index.html" class="hover:text-blue-500 transition">Home</a>
+            </div>
+        </div>
+    </nav>
+
+    <article class="pt-24 pb-16">
+        <div class="container mx-auto px-4">
+            <header class="text-center mb-12">
+                <span class="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-sm">Your Category</span>
+                <h1 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent mt-6">
+                    Your Blog Post Title
+                </h1>
+                <div class="text-gray-400">
+                    <span>By Michael Bennett</span> • <span>June 28, 2025</span> • <span>5 min read</span>
+                </div>
+            </header>
+
+            <div class="blog-content">
+                <p class="text-xl text-gray-300 mb-8 text-center italic">
+                    Your compelling opening paragraph...
+                </p>
+
+                <h2>Your First Section</h2>
+                <p>Your content here...</p>
+
+                <blockquote>
+                    "Important quotes look like this"
+                </blockquote>
+
+                <h2>Your Second Section</h2>
+                <p>More content...</p>
+            </div>
+
+            <div class="mt-12 p-8 bg-gradient-to-r from-blue-900/30 to-purple-900/30 rounded-xl text-center">
+                <h3 class="text-2xl font-bold mb-4">Ready for the Quantum Future?</h3>
+                <a href="../index.html#contact" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition">
+                    Schedule a Consultation
+                </a>
+            </div>
+        </div>
+    </article>
+
+    <footer class="bg-black/50 backdrop-blur-lg py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 Quantum Shield Labs. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

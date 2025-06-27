@@ -1,6 +1,7 @@
 // Blog post loader for Quantum Shield Labs
 // Dynamically loads and displays blog posts
 
+
 const blogPosts = [
     {
         title: "The Quantum Reality Check: What a Former Cambridge Researcher Reveals",
